@@ -5,13 +5,13 @@ import { FriendListBox } from './FriendList.styled';
 export const FriendList = ({ friends }) => {
   return (
     <FriendListBox>
-      {friends.map(friend => {
+      {friends.map(({ id, name, isOnline, avatar }) => {
         return (
           <FriendListItem
-            key={friend.id}
-            name={friend.name}
-            isOnline={friend.isOnline}
-            avatar={friend.avatar}
+            key={id}
+            name={name}
+            isOnline={isOnline}
+            avatar={avatar}
           />
         );
       })}
